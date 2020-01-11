@@ -1,4 +1,3 @@
-var marcador;
 var markerGroupFiltro;
 var mymap = L.map("mymap").setView([28.4895723, -16.31815646], 13);
 L.tileLayer(
