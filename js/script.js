@@ -1,6 +1,6 @@
 function cerrarSesion() {
   firebase.auth().signOut().then(function() {
-    window.location.assign("/index.html")
+    window.location.assign("../index.html")
   });
 }
 
