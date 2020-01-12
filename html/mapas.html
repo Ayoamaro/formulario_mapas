@@ -15,23 +15,25 @@
     <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css" />
   </head>
-  <body>
-    <form>
-      <fieldset id="campo">
-        Filtrar por:
-        <select id="opcion">
+  <body class="bg-primary">
+    <div class="form-inline m-2 p-2 bg-light rounded">
+        <label class="my-1 mr-2" for="opcion">Filtrar por: </label>
+        <select class="custom-select my-1 mr-sm-2 bg-primary text-light" id="opcion">
           <option>Nombre</option>
           <option>Código postal</option>
         </select>
-        <input type="text" id="valor" />
-        <br />
-        <input id="boton" type="button" value="Buscar" />
-      </fieldset>
-    </form>
-    <button type="button" onclick="cerrarSesion()">Cerrar Sesión</button>
-    <div id="mymap"></div>
+        <input type="text" id="valor" class="form-control mr-sm-2" />
+        <input class="btn btn-success" id="boton" type="button"  value="Buscar" />
+        <div class="form-inline m-2 p-2 float-right"></div>
+          <input class="btn btn-danger rounded-pill" type="button" onclick="cerrarSesion()" value="Cerrar Sesión" />
+        </div>
+    </div>
+    <div id="mymap" class="m-2 p-2 rounded"></div>
   </body>
   <script
     src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
