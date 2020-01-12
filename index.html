@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Inicio - Formularios para visualizar mapas</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="fonts\font-awesome-4.7.0\css\font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Formulario previo a la visualización del mapa de Tenerife</h5>
+            <div class="form-signin">
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control">
+                <label for="inputEmail"><i class="fa fa-user mr-1"></i> Email</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="inputContrasenia" class="form-control">
+                <label for="inputPassword"><i class="fa fa-lock mr-1"></i> Contraseña</label>
+              </div>
+              <div id="errorInicioSesion"></div>
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase mb-4" onclick="inicioSesion()">Iniciar
+                Sesión</button>
+
+              <div id="contenido"></div>
+              <div id="errorContenido"></div>
+              <a href="html\registro.html" style="padding-left: 70px;">¿No tienes cuenta? Regístrate aquí</a>
+              <hr class="my-4">
+
+              <button class="btn btn-lg btn-google btn-block text-uppercase" onclick="inicioSesionGoogle()">
+                <i class="fa fa-google mr-2"></i> Accede con Google
+              </button>
+              <button class="btn btn-lg btn-facebook btn-block text-uppercase" onclick="inicioSesionFacebook()">
+                <i class="fa fa-facebook-f mr-2"></i> Accede con Facebook
+              </button>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</body>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDYjLbtaNv23fSXGeXE7DnSM632tkeFKEI",
+    authDomain: "u06p01-formularios-y-mapas.firebaseapp.com",
+    databaseURL: "https://u06p01-formularios-y-mapas.firebaseio.com",
+    projectId: "u06p01-formularios-y-mapas",
+    storageBucket: "u06p01-formularios-y-mapas.appspot.com",
+    messagingSenderId: "280262384785",
+    appId: "1:280262384785:web:1676a217e70f561dc27330",
+    measurementId: "G-8VWG5ZV4PK"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<!-- Script with Login -->
+<script src="js/init.js"></script>
+</html>
