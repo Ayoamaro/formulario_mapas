@@ -5,9 +5,9 @@
 
 ## Requisitos mínimos
 Uso de la API para representar mapas con JS: [leaflet.js](https://leafletjs.com)
-* Web con formulario Login
-* Web con formulario para establecer criterios y filtrar elementos a representar
-* Utilizar el JSON siguiente como origen de los datos a representar
+* Web con formulario Login.
+* Web con formulario para establecer criterios y filtrar elementos a representar.
+* Utilizar el JSON siguiente como origen de los datos a representar.
 
 ## Ejecución
 1. Descargar el [Proyecto](https://bit.ly/2ZzvBPB) y descomprimir.
